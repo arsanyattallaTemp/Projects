@@ -20,7 +20,7 @@ jobs:
       matrix:
         include:
         - chromedriverVersion: "2.28"
-          apiLevel: 30
+          apiLevel: 29
           emuTag: default
 
     env:
