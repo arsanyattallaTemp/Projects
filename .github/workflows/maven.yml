@@ -43,13 +43,13 @@ jobs:
       #  chmod +x ./scripts/RunAppiumServer.sh # install and run appium server in the background
        # ./scripts/RunAppiumServer.sh
    
-    #- name: Run Appium Tests
-     # uses: reactivecircus/android-emulator-runner@v2 # install and create the Emulator
-      #with:
+    - name: Run Appium Tests
+      #uses: reactivecircus/android-emulator-runner@v2 # install and create the Emulator
+      with:
        # api-level: ${{ matrix.apiLevel }}
         #target: ${{ matrix.emuTag }}
         #arch: x86_64
         #profile: Nexus 6
-        run: mvn clean install # running our test with info to check the results
+        script: mvn clean install # running our test with info to check the results
 
 
