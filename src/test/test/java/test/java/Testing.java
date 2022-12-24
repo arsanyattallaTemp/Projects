@@ -40,7 +40,7 @@ public class Testing {
         desiredCapabilities.setCapability("appium:deviceName", "Nexus6");
         desiredCapabilities.setCapability("appium:ensureWebviewsHavePages", true);
         desiredCapabilities.setCapability("autoGrantPermissions", true);
-        desiredCapabilities.setCapability(AndroidMobileCapabilityType.ADB_EXEC_TIMEOUT, 600000);
+        desiredCapabilities.setCapability("appWaitForLaunch", true);
         UiAutomator2Options options = new UiAutomator2Options();
         options.setNativeWebScreenshot(true);
 
