@@ -4,6 +4,8 @@ import org.apache.commons.codec.binary.Base64;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
+
 
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.MobilePlatform;
