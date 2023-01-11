@@ -53,7 +53,7 @@ public class Testing {
         driver = new AndroidDriver(remoteUrl, desiredCapabilities);
 
 
-    driver.get("app.zomepower.com");
+    driver.get("https://app.zomepower.com");
         System.out.println("success");
         Thread.sleep(10000);
     Thread.sleep(10000);
