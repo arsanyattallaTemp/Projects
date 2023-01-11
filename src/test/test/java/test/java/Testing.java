@@ -41,6 +41,8 @@ public class Testing {
         desiredCapabilities.setCapability("appium:ensureWebviewsHavePages", true);
         desiredCapabilities.setCapability("autoGrantPermissions", true);
         desiredCapabilities.setCapability("appWaitForLaunch", true);
+         desiredCapabilities.setCapability("appWaitActivity", "org.chromium.webview_shell.WebViewBrowserActivity");
+         desiredCapabilities.setCapability("appWaitDuration", 300000);
         UiAutomator2Options options = new UiAutomator2Options();
         options.setNativeWebScreenshot(true);
 
