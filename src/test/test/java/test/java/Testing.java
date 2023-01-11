@@ -43,6 +43,7 @@ public class Testing {
         desiredCapabilities.setCapability("appWaitForLaunch", true);
          desiredCapabilities.setCapability("appWaitActivity", "org.chromium.webview_shell.WebViewBrowserActivity");
          desiredCapabilities.setCapability("appWaitDuration", 300000);
+         desiredCapabilities.setCapability("uiautomator2ServerInstallTimeout", 600000);
         UiAutomator2Options options = new UiAutomator2Options();
         options.setNativeWebScreenshot(true);
 
