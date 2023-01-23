@@ -50,6 +50,6 @@ jobs:
         target: ${{ matrix.emuTag }}
         arch: x86_64
         #profile: Nexus 6
-    - run: mvn clean install # running our test with info to check the results
+        script: mvn clean install # running our test with info to check the results
 
 
