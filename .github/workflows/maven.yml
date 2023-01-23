@@ -44,7 +44,7 @@ jobs:
         ./scripts/RunAppiumServer.sh
    
     - name: Run Appium Tests
-    - uses: reactivecircus/android-emulator-runner@v2 # install and create the Emulator
+      uses: reactivecircus/android-emulator-runner@v2 # install and create the Emulator
       with:
         api-level: ${{ matrix.apiLevel }}
         target: ${{ matrix.emuTag }}
