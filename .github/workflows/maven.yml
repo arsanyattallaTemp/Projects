@@ -38,18 +38,18 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 19
-    #- name: Install and Run Appium Server
-     # run: |
-      #  chmod +x ./scripts/RunAppiumServer.sh # install and run appium server in the background
-       # ./scripts/RunAppiumServer.sh
+    - name: Install and Run Appium Server
+      run: |
+        chmod +x ./scripts/RunAppiumServer.sh # install and run appium server in the background
+        ./scripts/RunAppiumServer.sh
    
     - name: Run Appium Tests
-      #uses: reactivecircus/android-emulator-runner@v2 # install and create the Emulator
-     # with:
-       # api-level: ${{ matrix.apiLevel }}
-        #target: ${{ matrix.emuTag }}
-        #arch: x86_64
+    - uses: reactivecircus/android-emulator-runner@v2 # install and create the Emulator
+      with:
+        api-level: ${{ matrix.apiLevel }}
+        target: ${{ matrix.emuTag }}
+        arch: x86_64
         #profile: Nexus 6
-      run: mvn clean install # running our test with info to check the results
+    - run: mvn clean install # running our test with info to check the results
 
 
