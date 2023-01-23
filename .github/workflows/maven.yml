@@ -31,7 +31,7 @@ jobs:
       _FORCE_LOGS: 1
     # No hardware acceleration is available for emulators on Ubuntu:
     # https://github.com/marketplace/actions/android-emulator-runner#can-i-use-this-action-on-linux-vms
-    runs-on: self-hosted # the machine type
+    runs-on: ubuntu-latest # the machine type
     steps:
     - uses: actions/checkout@v2 #checkout the code
     - name: Set up JDK 15
