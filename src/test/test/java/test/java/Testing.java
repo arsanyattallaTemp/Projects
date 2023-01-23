@@ -4,8 +4,6 @@ import org.apache.commons.codec.binary.Base64;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-
 
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.MobilePlatform;
@@ -40,14 +38,10 @@ public class Testing {
         desiredCapabilities.setCapability("appium:deviceName", "Nexus6");
         desiredCapabilities.setCapability("appium:ensureWebviewsHavePages", true);
         desiredCapabilities.setCapability("autoGrantPermissions", true);
-        desiredCapabilities.setCapability("appWaitForLaunch", true);
-         desiredCapabilities.setCapability("appWaitActivity", "org.chromium.webview_shell.WebViewBrowserActivity");
-         desiredCapabilities.setCapability("appWaitDuration", 300000);
-         desiredCapabilities.setCapability("uiautomator2ServerInstallTimeout", 1000000);
         UiAutomator2Options options = new UiAutomator2Options();
         options.setNativeWebScreenshot(true);
 
-        
+
 
         URL remoteUrl = new URL("http://localhost:4723/wd/hub");
         driver = new AndroidDriver(remoteUrl, desiredCapabilities);
