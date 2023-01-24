@@ -1,5 +1,6 @@
 package test.java;
 
+import io.appium.java_client.AppiumBy;
 import org.apache.commons.codec.binary.Base64;
 import io.appium.java_client.PerformsTouchActions;
 import io.appium.java_client.TouchAction;
@@ -41,7 +42,7 @@ public class Testing {
         UiAutomator2Options options = new UiAutomator2Options();
         options.setNativeWebScreenshot(true);
 
-
+        
 
         URL remoteUrl = new URL("http://localhost:4723/wd/hub");
         driver = new AndroidDriver(remoteUrl, desiredCapabilities);
@@ -53,7 +54,7 @@ public class Testing {
     Thread.sleep(10000);
 
 
-    ((CanRecordScreen) driver).startRecordingScreen();
+    //((CanRecordScreen) driver).startRecordingScreen();
 
     driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/" +
                     "android.widget.LinearLayout/android.webkit.WebView/" +
@@ -69,8 +70,14 @@ public class Testing {
                 ".LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/" +
                 "android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/" +
                 "android.view.View/android.view.View[3]/android.widget.Button")).click();
-        Thread.sleep(9000);
-        TouchAction touchAction = new TouchAction((PerformsTouchActions) driver);
+    Thread.sleep(9000);
+    Thread.sleep(9000);
+
+    driver.findElement(By.xpath("//android.widget.Button[@text='+']")).click();
+    WebElement set = driver.findElement(By.xpath("//android.widget.Button[@text='Set temperature']"));
+    set.click();
+
+    /*TouchAction touchAction = new TouchAction((PerformsTouchActions) driver);
 
         for (int i = 0; i < 2; i++) {
             touchAction.tap(PointOption.point(707, 1049))
@@ -79,15 +86,15 @@ public class Testing {
         touchAction.tap(PointOption.point(517, 1888))
                 .perform();
        // Thread.sleep(5000);
-
-    Random rand = new Random();
-    int upperbound = 25;
-    int int_random = rand.nextInt(upperbound);
-    String base64String = ((CanRecordScreen) driver).stopRecordingScreen();
-    byte[] data = Base64.decodeBase64(base64String);
-    String destinationPath = "src\\"+int_random+".mp4";
-    Path path = Paths.get(destinationPath);
-    FileUtils.writeByteArrayToFile(new File(path.toUri()), data);
+*/
+    //Random rand = new Random();
+    //int upperbound = 25;
+    //int int_random = rand.nextInt(upperbound);
+    //String base64String = ((CanRecordScreen) driver).stopRecordingScreen();
+    //byte[] data = Base64.decodeBase64(base64String);
+    //String destinationPath = "src\\"+int_random+".mp4";
+   //Path path = Paths.get(destinationPath);
+    //FileUtils.writeByteArrayToFile(new File(path.toUri()), data);
 
 
 
