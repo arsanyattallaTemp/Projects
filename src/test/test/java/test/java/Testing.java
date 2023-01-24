@@ -73,13 +73,9 @@ public class Testing {
     Thread.sleep(9000);
     Thread.sleep(9000);
 
-    driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/
-                                android.widget.LinearLayout/android.widget.FrameLayout[2]/
-                                android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[2]/
-                                android.view.View/android.app.Dialog/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/
-                                android.widget.Button[2]")).click();
+    driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[2]/android.view.View/android.app.Dialog/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.Button[2]")).click();
     //WebElement set = driver.findElement(By.xpath("//android.widget.Button[@text='Set temperature']"));
-    //set.click();
+   // set.click();
 
     /*TouchAction touchAction = new TouchAction((PerformsTouchActions) driver);
 
