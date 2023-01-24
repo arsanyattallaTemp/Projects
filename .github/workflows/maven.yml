@@ -18,8 +18,8 @@ jobs:
   test:
     strategy:
          matrix:
-          api-level: [27]
-          target: [default, google_apis]
+          api-level: [29]
+          target: [google_apis]
 
     env:
       CI: true
