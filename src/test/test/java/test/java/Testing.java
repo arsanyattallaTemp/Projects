@@ -86,7 +86,7 @@ public class Testing {
         touchAction.tap(PointOption.point(704, 2486))
                 .perform();
        // Thread.sleep(5000);
-*/
+
     //Random rand = new Random();
     //int upperbound = 25;
     //int int_random = rand.nextInt(upperbound);
