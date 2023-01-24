@@ -74,16 +74,16 @@ public class Testing {
     Thread.sleep(9000);
 
     //driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[2]/android.view.View/android.app.Dialog/android.view.View/android.view.View/android.view.View[1]/android.view.View[2]/android.widget.Button[2]")).click();
-    WebElement set = driver.findElement(By.xpath("//android.widget.Button[@text='Set temperature']"));
+   // WebElement set = driver.findElement(By.xpath("//android.widget.Button[@text='Set temperature']"));
    // set.click();
 
-    /*TouchAction touchAction = new TouchAction((PerformsTouchActions) driver);
+    TouchAction touchAction = new TouchAction((PerformsTouchActions) driver);
 
         for (int i = 0; i < 2; i++) {
-            touchAction.tap(PointOption.point(707, 1049))
+            touchAction.tap(PointOption.point(932, 1440))
                     .perform();
         }
-        touchAction.tap(PointOption.point(517, 1888))
+        touchAction.tap(PointOption.point(704, 2486))
                 .perform();
        // Thread.sleep(5000);
 */
