@@ -17,11 +17,9 @@ on:
 jobs:
   test:
     strategy:
-      matrix:
-        include:
-        - chromedriverVersion: "2.28"
-          api-Level: "[25,28,29,30]" 
-          emuTag: default
+         matrix:
+          api-level: [21, 23, 29]
+          target: [default, google_apis]
 
     env:
       CI: true
