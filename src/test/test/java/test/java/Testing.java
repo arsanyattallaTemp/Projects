@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 
-public class Testing1 {
+public class Testing {
 
     AndroidDriver driver;
     String baseUrl;
