@@ -77,16 +77,16 @@ public class Testing {
     WebElement set = driver.findElement(By.xpath("//android.widget.Button[@text='Set temperature']"));
                 System.out.println("element found");
 
-   // set.click();
+    set.click();
 
-    TouchAction touchAction = new TouchAction((PerformsTouchActions) driver);
+    //TouchAction touchAction = new TouchAction((PerformsTouchActions) driver);
 
-        for (int i = 0; i < 2; i++) {
-            touchAction.tap(PointOption.point(932, 1440))
-                    .perform();
-        }
-        touchAction.tap(PointOption.point(704, 2486))
-                .perform();
+     //   for (int i = 0; i < 2; i++) {
+    //        touchAction.tap(PointOption.point(932, 1440))
+    //                .perform();
+     //   }
+      //  touchAction.tap(PointOption.point(704, 2486))
+      //          .perform();
        // Thread.sleep(5000);
 
     //Random rand = new Random();
