@@ -49,7 +49,7 @@ jobs:
         api-level: ${{ matrix.apiLevel }}
         target: ${{ matrix.emutag }}
         arch: x86_64
-        profile: pixel_3_xl
+        profile: pixel_6
         script: mvn clean install # running our test with info to check the results
 
 
