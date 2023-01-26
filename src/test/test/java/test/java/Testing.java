@@ -1,5 +1,3 @@
-package java;
-
 import io.appium.java_client.android.AndroidDriver;
 
 import io.appium.java_client.remote.MobilePlatform;
@@ -88,11 +86,11 @@ public class Testing {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-       // @AfterTest
-        //public void tearDown() throws Exception {
+        @AfterTest
+        public void tearDown() throws Exception {
 
-          //  driver.quit();
-        //}
+            driver.quit();
+        }
 
     }
 
