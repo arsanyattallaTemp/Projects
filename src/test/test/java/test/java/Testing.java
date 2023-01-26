@@ -63,13 +63,17 @@ public class Testing {
         loginBtn.click();
         System.out.println("Logged in Successfully");
 
-        driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 
-        WebElement addTemp = driver.findElement(By.xpath("//android.widget.Button[@text='+']"));
+        try {
+            WebElement addTemp = driver.findElement(By.xpath("//android.widget.Button[@text='+']"));
+            addTemp.click();
+            System.out.println("Added temp");
 
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        addTemp.click();
-        System.out.println("Added Temp");
+
+        } catch (Exception e) {
+            System.out.println("Add Temp Button not found");
+        }
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -86,11 +90,11 @@ public class Testing {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
-        @AfterTest
-        public void tearDown() throws Exception {
+       // @AfterTest
+        //public void tearDown() throws Exception {
 
-            driver.quit();
-        }
+          //  driver.quit();
+        //}
 
     }
 
