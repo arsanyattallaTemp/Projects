@@ -15,7 +15,7 @@ on:
    # branches: [ "main"]
   # [workflow_dispatch]
 jobs:
-  test:
+  Tenant_Mobile_App:
     strategy:
         matrix:
          include:
@@ -43,7 +43,7 @@ jobs:
         chmod +x ./scripts/RunAppiumServer.sh # install and run appium server in the background
         ./scripts/RunAppiumServer.sh
    
-    - name: Run Appium Tests
+    - name: Start emulator and run test
       uses: reactivecircus/android-emulator-runner@v2 # install and create the Emulator
       with:
         api-level: ${{ matrix.apiLevel }}
