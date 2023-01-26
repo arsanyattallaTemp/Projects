@@ -16,7 +16,7 @@ import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 
-public class Testing1 {
+public class Testing {
 
     AndroidDriver driver;
     String baseUrl;
