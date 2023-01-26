@@ -1,3 +1,5 @@
+package java;
+
 import io.appium.java_client.android.AndroidDriver;
 
 import io.appium.java_client.remote.MobilePlatform;
@@ -21,14 +23,8 @@ public class Testing {
     AndroidDriver driver;
     String baseUrl;
 
-    //AndroidDriver wait = new AndroidDriver(driver, Duration.ofSeconds(20));
-    public void waitForElementToDisplay(WebElement element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        wait.until(ExpectedConditions.visibilityOf(element));
-    }
 
-
-    @Test
+    @BeforeTest
     public void setUp() throws Exception {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("appium:appPackage", "org.chromium.webview_shell");
@@ -44,7 +40,13 @@ public class Testing {
         driver = new AndroidDriver(remoteUrl, desiredCapabilities);
         driver.get(baseUrl);
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-        
+        System.out.println("Navigated to website");
+
+    }
+
+    @Test
+    public void login() {
+
         WebElement uName = driver.findElement(By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout[2]/" +
                 "android.widget.LinearLayout/android.webkit.WebView/" +
                 "android.webkit.WebView/android.view.View" +
@@ -57,20 +59,20 @@ public class Testing {
                 ".LinearLayout/android.widget.FrameLayout[2]/android.widget.LinearLayout/" +
                 "android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/" +
                 "android.view.View/android.view.View[3]/android.widget.Button"));
-        System.out.println("Navigated to website");
-        
+
         uName.sendKeys("testbeddev3");
         passWd.sendKeys("Testbeddev3!");
         loginBtn.click();
-        
+        System.out.println("Logged in Successfully");
+
         driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+
         WebElement addTemp = driver.findElement(By.xpath("//android.widget.Button[@text='+']"));
 
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-
         addTemp.click();
-        
+        System.out.println("Added Temp");
+
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 
@@ -84,8 +86,15 @@ public class Testing {
             System.out.println("Device is off");
         }
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+       // @AfterTest
+        //public void tearDown() throws Exception {
+
+          //  driver.quit();
+        //}
 
     }
 
 
-}
+
