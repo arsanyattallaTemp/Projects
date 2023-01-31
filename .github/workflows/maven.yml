@@ -51,5 +51,8 @@ jobs:
         arch: x86_64
         profile: pixel_6
         script: mvn clean install # running our test with info to check the results
+    - name: Test Reporter
+      uses: dorny/test-reporter@v1.6.0
+
 
 
